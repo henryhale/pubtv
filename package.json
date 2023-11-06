@@ -1,0 +1,37 @@
+{
+  "name": "pubtv",
+  "version": "1.0.0",
+  "description": "📺 A basic client for streaming iptv channels worldwide",
+  "private": "true",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henryhale/pubtv.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Henry Hale",
+    "url": "https://github.com/henryhale"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/henryhale/pubtv/issues"
+  },
+  "homepage": "https://github.com/henryhale/pubtv#readme",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.4.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "vite": "^4.5.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "vue": "^3.3.7"
+  }
+}
