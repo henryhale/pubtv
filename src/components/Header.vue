@@ -13,7 +13,7 @@
 
 <style scoped>
 nav {
-    @apply fixed top-0 left-0 right-0 bg-gray-900 shadow;
+    @apply fixed z-20 top-0 left-0 right-0 bg-gray-900 shadow;
 }
 
 nav > div {

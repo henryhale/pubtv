@@ -59,7 +59,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="flex flex-col space-y-3 justify-center place-items-center p-2 sm:p-4 lg:p-6">
+    <div class="mainbox mt-16 flex flex-col space-y-3 justify-center place-items-center p-2 sm:p-4 lg:p-6">
         <div class="w-full px-4">
             <video ref="player" controls preload="auto">
                 Your browser does not support the video tag.
@@ -92,6 +92,10 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.mainbox {
+    min-height: calc(100vh - 128px);
+}
+
 video {
     @apply aspect-video min-h-full min-w-full max-w-6xl inline-block mx-auto object-cover
     border border-black;
