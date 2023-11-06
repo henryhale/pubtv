@@ -3,7 +3,7 @@
 <template>
     <nav>
         <div>
-            <a href="#" class="group">
+            <a href="https://github.com/henryhale/pubtv/" class="group">
                 <span class="group-hover:text-green-400 group-hover:border-green-400">PUB</span>
                 <span class="bg-white text-gray-900 group-hover:bg-green-400">TV</span>
             </a>
