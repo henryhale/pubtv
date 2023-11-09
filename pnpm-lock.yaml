@@ -5,9 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@iptv/playlist':
+    specifier: ^0.0.4
+    version: 0.0.4
   axios:
     specifier: ^1.6.0
     version: 1.6.0
+  hls.js:
+    specifier: ^1.4.12
+    version: 1.4.12
   vue:
     specifier: ^3.3.7
     version: 3.3.7
@@ -256,6 +262,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@iptv/playlist@0.0.4:
+    resolution: {integrity: sha512-6odUS132Xtzu0QRQBscY9713g+jZj4Z4IoKyXB6VXH2aJ3lnLwaddaKq/W92Ym1fcwm7qHBFwOo2+4KtDXm4DA==}
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
@@ -669,6 +679,10 @@ packages:
     dependencies:
       function-bind: 1.1.2
     dev: true
+
+  /hls.js@1.4.12:
+    resolution: {integrity: sha512-1RBpx2VihibzE3WE9kGoVCtrhhDWTzydzElk/kyRbEOLnb1WIE+3ZabM/L8BqKFTCL3pUy4QzhXgD1Q6Igr1JA==}
+    dev: false
 
   /inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
