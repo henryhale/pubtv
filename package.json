@@ -31,7 +31,9 @@
     "vite": "^4.5.0"
   },
   "dependencies": {
+    "@iptv/playlist": "^0.0.4",
     "axios": "^1.6.0",
+    "hls.js": "^1.4.12",
     "vue": "^3.3.7"
   }
 }

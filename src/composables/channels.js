@@ -1,4 +1,5 @@
 import axios from "axios";
+import { parseM3U } from "@iptv/playlist";
 
 const url_part = "https://iptv-org.github.io/iptv/categories/";
 
@@ -9,38 +10,13 @@ export async function getChannels(category) {
         if (cache[category]) {
             return cache[category];
         }
-        const list = await fetch(`${url_part}${category}.m3u`);
-        result = extractChannelData(await list.text());
+        const list = await axios.get(`${url_part}${category}.m3u`);
+        result = parseM3U(await list.data).channels;
         cache[category] = result;
     } catch (error) {
         console.error(error);
     }
     return result;
-}
-
-function extractChannelData(data = "") {
-    const lines = data.split('\n');
-    const channels = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-        if (lines[i].startsWith('#EXTINF:')) {
-            const d = lines[i].split(',');
-
-            const channel = {
-                name: d[1],
-                url: lines[i+1]
-            };
-
-            channels.push(channel);
-        }
-    }
-
-    return channels.filter(c => {
-        if (!c.url.startsWith("https://") || c.name.includes("[Not 24/7]") || c.name.includes("[Geo-blocked]")) {
-            return false;
-        }
-        return true;
-    });
 }
 
 const rCache = {};
@@ -50,8 +26,8 @@ export async function getResolutions(url) {
         if (rCache[url]) {
             return rCache[url];
         }
-        const list = await fetch(url);
-        result = extractResolutionData(url, await list.text());
+        const list = await axios.get(url);
+        result = extractResolutionData(url, await list.data);
         cache[url] = result;
     } catch (error) {
         console.error(error);
