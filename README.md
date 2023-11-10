@@ -14,16 +14,17 @@ to enable visitors stream these channels in the browser.
 
 ## live demo
 
-Here is a demo for streaming channels organised by categories: [pubtv demo](https://henryhale.github.io/pubtv/).
+Here is a demo for live streaming channels organised by categories: [pubtv demo](https://henryhale.github.io/pubtv/).
 
 ## supported browsers
 
 Using the live demo, Google Chrome for mobile devices offers a nice experience.
 
 You are most likely going to bump into a pool of errors when using browsers
-that don't support certain media formats such as `application/vnd.apple.mpegurl` on Firefox.
+that don't support certain media formats such as `application/vnd.apple.mpegurl`. 
+Browsers without built-in HTTP Live Streaming (HLS) support will fallback to Media Source Extensions if enabled with the help of [hls.js](https://github.com/video-dev/hls.js) (browsers in this line include Firefox - desktop). 
 
->In that case, update your browser: ensure that your browser is up-to-date. Otherwise use other means such as another browser or use VLC to stream.
+>Otherwise, update your browser: ensure that your browser is up-to-date or try another browser.
 
 Latest versions of Google Chrome and Safari are recommended since they have good support for [HLS streams](https://en.wikipedia.org/wiki/HTTP_Live_Streaming).
 
@@ -31,8 +32,8 @@ Latest versions of Google Chrome and Safari are recommended since they have good
 
 This project is still under heavy development, expect some bugs or errors.
 
-- setup: install `node` and `npm`
-- dev server: run `npm run dev`
+- setup: install `node` and `pnpm`
+- dev server: run `pnpm run dev`
 
 ## license
 
