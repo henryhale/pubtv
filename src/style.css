@@ -13,7 +13,7 @@
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
 
-  @apply antialiased bg-slate-800 text-gray-300;
+  @apply antialiased bg-gray-900 text-gray-300;
 }
 
 @media (prefers-color-scheme: light) {
