@@ -3,6 +3,7 @@ import { reactive, ref, onMounted, watchEffect } from "vue";
 import { playVideo, toggleMute, changeVideo, changeVolume, toggleFullScreen } from "../composables/video";
 
 const props = defineProps(["src", "title", "logo"]);
+const emit = defineEmits(['play']);
 
 const state = reactive({
     playing: false,
@@ -15,11 +16,11 @@ const video = ref();
 const volume = ref();
 const player = ref();
 
-
 onMounted(() => {
     state.muted = video.value.muted;
     state.volume = video.value.volume;
     watchEffect(() => changeVideo(state, video.value, props.src));
+    watchEffect(() => emit('play', state.playing));
 });
 
 function updateFullscreen() {

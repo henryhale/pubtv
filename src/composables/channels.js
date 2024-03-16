@@ -11,7 +11,7 @@ export async function getChannels(category) {
             return cache[category];
         }
         const list = await axios.get(`${url_part}${category}.m3u`);
-        result = parseM3U(await list.data).channels;
+        result = Array.from(new Set(parseM3U(await list.data).channels));
         cache[category] = result;
     } catch (error) {
         console.error(error);
@@ -30,7 +30,7 @@ export async function getResolutions(url) {
         result = extractResolutionData(url, await list.data);
         cache[url] = result;
     } catch (error) {
-        console.error(error);
+        // console.error(error);
     }
     return result;
 }
