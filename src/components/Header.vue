@@ -13,10 +13,11 @@
 
 <style scoped>
 nav {
-    @apply fixed z-20 top-0 left-0 right-0 bg-slate-900 shadow;
+    background-color: #161b22;
+    @apply sticky z-20 top-0 left-0 right-0;
 }
 
-nav > div {
+nav>div {
     @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 h-16 flex items-center justify-center;
 }
 
@@ -24,7 +25,7 @@ a {
     @apply mx-auto flex items-center border text-2xl font-bold text-white hover:border-green-400;
 }
 
-a > span {
+a>span {
     @apply px-2;
 }
 </style>

@@ -5,27 +5,27 @@ import VPlayer from "./VideoPlayer.vue";
 
 const categories = [
     "Animation",
-    "Auto",   
+    "Auto",
     "Business",
     "Classic",
-    "Comedy", 
+    "Comedy",
     "Cooking",
     "Culture",
     "Documentary",
     "Education",
-    "Family",  
+    "Family",
     "Kids",
     "Legislative",
     "Lifestyle",
     "Movies",
     "Music",
     "Outdoor",
-    "Relax",	 
-    "Science", 
+    "Relax",
+    "Science",
     "Series",
     "Shop",
-    "Travel",	
-    "Weather",	
+    "Travel",
+    "Weather",
 ];
 
 const category = ref(categories[5]);
@@ -60,7 +60,7 @@ onMounted(() => {
         const c = category.value.toLowerCase();
         console.log("fetching channels for : ", c);
         const r = await getChannels(c);
-        channels.value = r.map((c, i) => { c.i = i+1; return c; });
+        channels.value = r.map((c, i) => { c.i = i + 1; return c; });
         console.log("channels for : ", c, r);
     });
 
@@ -85,7 +85,8 @@ onMounted(() => {
 <template>
     <div class="container mx-auto">
         <VPlayer :title="channel.name || 'Select a channel'" :src="channel.url" :logo="channel.tvgLogo" />
-        <div class="flex flex-col sm:flex-row px-4 py-6 space-y-4 sm:space-y-0 sm:space-x-4 align-center justify-center">
+        <div
+            class="flex flex-col sm:flex-row px-4 py-6 space-y-4 sm:space-y-0 sm:space-x-4 align-center justify-center">
             <div>
                 <label for="categories">Category</label>
                 <select v-model="category" id="categories">
