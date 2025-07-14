@@ -1,9 +1,9 @@
 ![](./public/logo.png)
 
 # pubtv
-📺 A basic client for streaming some of the many [IPTV](https://en.wikipedia.org/wiki/Internet_Protocol_television) channels worldwide
+A basic client for streaming some of the many [IPTV](https://en.wikipedia.org/wiki/Internet_Protocol_television) channels worldwide
 
-## overview
+## Overview
 
 >IPTV stands for Internet Protocol Television
 
@@ -12,11 +12,14 @@ This project is based on the publicly available IPTV channels at [iptv-org/iptv]
 This repository contains sourcecode for setting up a video player in order
 to enable visitors stream these channels in the browser.
 
-## live demo
+## Live Demo
 
-Here is a demo for live streaming channels organised by categories: [pubtv demo](https://henryhale.github.io/pubtv/).
+> [!IMPORTANT]
+> Using a VPN or Tor is highly recommended to hide your IP address while using pubtv
 
-## supported browsers
+Here is a demo for live streaming channels organised by categories: :rocket: [Launch PUBTV](https://henryhale.github.io/pubtv/).
+
+## Supported Browsers
 
 Using the live demo, Google Chrome for mobile devices offers a nice experience.
 
@@ -28,14 +31,14 @@ Browsers without built-in HTTP Live Streaming (HLS) support will fallback to Med
 
 Latest versions of Google Chrome and Safari are recommended since they have good support for [HLS streams](https://en.wikipedia.org/wiki/HTTP_Live_Streaming).
 
-## development
+## Development
 
 This project is still under heavy development, expect some bugs or errors.
 
 - setup: install `node` and `pnpm`
 - dev server: run `pnpm run dev`
 
-## license
+## License
 
 Copyright (c) 2023 [Henry Hale](https://github.com/henryhale).
 
